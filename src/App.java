@@ -26,17 +26,17 @@ public class App {
         new Person("Sofia", 24),
         };
         sC.mostrarArreglo(people);
-        bB.bubbleSort(people);
+        controlador.bubbleSort(people);
         sC.mostrarArreglo(people);
 
         Integer result1 = bB.busquedaBinaria(people,  28);
         sC.mostrarResultado(people, result1);
 
         sC.mostrarArreglo(arr);
-        bB.bubbleSort(arr);
+        controlador.bubbleSort(arr);
         sC.mostrarArreglo(arr);
 
-         Integer result2 = bB.busquedaBinaria(arr,  8);
+        Integer result2 = bB.busquedaBinaria(arr,  8);
         sC.mostrarResultado(arr, result2);
 
     }
