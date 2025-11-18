@@ -32,7 +32,7 @@ public class BusquedaBinaria {
         return null;
     }
 
-    public Integer busquedaBinaria(Person[] arr, String objet){
+    public Integer busquedaBinaria(Person[] arr, int objet){
         int derecha = arr.length;
         int izquierda = 0;
         while (izquierda <= derecha ) {
@@ -43,11 +43,11 @@ public class BusquedaBinaria {
                                 + medio + " valorCentro = " + arr[medio]);
 
 
-            if (arr[medio].getName().compareTo(objet) == 0) {
+            if (arr[medio].getEdad() ==objet) {
                 System.out.println(" --> Encontrado");
                 return medio;
 
-            }else if (arr[medio].getName().compareTo(objet) < 0) {
+            }else if (arr[medio].getEdad() < objet) {
                 izquierda = medio + 1; 
                 System.out.println(" --> Buscando en la derecha");
             }else{
@@ -84,7 +84,7 @@ public class BusquedaBinaria {
 
             for (int j = 0; j < n - i - 1; j++) {
 
-                if (arr[j].getName().compareToIgnoreCase(arr[j + 1].getName()) > 0) {
+                if (arr[j].getEdad() > arr[j + 1].getEdad()) {
                     Person temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
