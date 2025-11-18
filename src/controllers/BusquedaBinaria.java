@@ -26,6 +26,11 @@ public class BusquedaBinaria {
                 derecha = medio - 1;
                 System.out.println(" --> Busqueda a la izquierda");
             }
+            System.out.print(" | ");
+            for (int i = izquierda; i <= derecha; i++) {
+                System.out.print(arr[i] + " | ");
+            }
+            System.out.println();
         }
 
 
